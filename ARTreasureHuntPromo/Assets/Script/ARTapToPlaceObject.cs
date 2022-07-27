@@ -26,13 +26,14 @@ public class ARTapToPlaceObject : MonoBehaviour
         UpdatePlacementIndicator();
 
         if(placementPoseIsValid&& Input.touchCount>0&& Input.GetTouch(0).phase == TouchPhase.Began){
+      
             PlaceObject();
         }
     }
 
     private void PlaceObject(){
-        Instantiate(plane, placementPose.position, placementPose.rotation);
-        Instantiate(objectToPlace,new Vector3(placementPose.position.x, (placementPose.position.y +1),placementPose.position.z), new Quaternion(placementPose.rotation.x-0.7071f,placementPose.rotation.y,placementPose.rotation.z,placementPose.rotation.w+0.7071f));
+        Instantiate(plane, placementPose.position, placementPose.rotation);//here in y increase to change the height
+        Instantiate(objectToPlace,new Vector3(placementPose.position.x, (placementPose.position.y +15),placementPose.position.z), new Quaternion(placementPose.rotation.x-1f,placementPose.rotation.y,placementPose.rotation.z,placementPose.rotation.w)); ///here change x and w for rotation
     }
     private void UpdatePlacementIndicator()
     {
