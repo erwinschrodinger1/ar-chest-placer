@@ -1,2 +1,2 @@
-# ARTreasureHunt
-This repo contains all the technical apps or datas required for KU AR Treasure hunt.
+#ar-chest-placer
+AR app which can place chest detecting the plane
